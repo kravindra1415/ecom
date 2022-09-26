@@ -1,0 +1,33 @@
+<div class="seller-auth">
+    <div *ngIf="!showLogin" class="signup">
+        <h1>Seller Sign-up</h1>
+        <form #sellerSignup="ngForm" (ngSubmit)="signUp(sellerSignup.value)" class="common-form">
+            <input type="text" class="form-input" ngModel name="name" id="" placeholder="Enter Name">
+            <input type="password" class="form-input" ngModel name="password" id="" placeholder="Enter Password">
+            <input type="text" class="form-input" ngModel name="email" id="" placeholder="Enter email">
+            <button class="form-button">Sign up</button>
+            <!-- <a style="margin-top: 20px;text-decoration: none;" (click)="openLogin()" href="">Already Have an Account ??
+                <span style="color: chocolate;font-weight: bold;">Click to Login</span></a> -->
+
+            <span style="margin-top: 20px;">Already Have an Account ??
+                <a style="margin-top: 20px;text-decoration: none;color: chocolate;font-weight: bold;cursor: pointer;"
+                    (click)="openLogin()">Click to Login</a></span>
+        </form>
+    </div>
+
+    <!-- Login Area -->
+    <div *ngIf="showLogin" class="login">
+        <h1>Seller Login</h1>
+        <p class="error-p">{{authError}}</p>
+        <form #sellerLogin="ngForm" (ngSubmit)="login(sellerLogin.value)" class="common-form">
+            <input type="text" class="form-input" ngModel name="email" id="" placeholder="Enter email">
+            <input type="password" class="form-input" ngModel name="password" id="" placeholder="Enter Password">
+            <button class="form-button">Sign up</button>
+            <span style="margin-top: 20px;">Don't Have an Account ??
+                <a class="auth-toggle-link"
+                    style="margin-top: 20px;text-decoration: none;color: chocolate;font-weight: bold;cursor: pointer;"
+                    (click)="openSignUp()">Click to Sign Up</a></span>
+        </form>
+    </div>
+
+</div>
