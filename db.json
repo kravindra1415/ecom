@@ -7,6 +7,53 @@
       "id": 1
     }
   ],
+  "products": [
+    {
+      "name": "phone1412",
+      "price": "180000",
+      "color": "white",
+      "category": "Mobile",
+      "image": "https://images.pexels.com/photos/3707744/pexels-photo-3707744.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "test1121",
+      "id": 1
+    },
+    {
+      "name": "phone1412",
+      "price": "180000",
+      "color": "white",
+      "category": "Mobile",
+      "image": "https://images.pexels.com/photos/3707744/pexels-photo-3707744.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "test1121",
+      "id": 2
+    },
+    {
+      "name": "phone1412",
+      "price": "180000",
+      "color": "white",
+      "category": "Mobile",
+      "image": "https://images.pexels.com/photos/3707744/pexels-photo-3707744.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "test1121",
+      "id": 3
+    },
+    {
+      "name": "phone1412",
+      "price": "180000",
+      "color": "white",
+      "category": "Mobile",
+      "image": "https://images.pexels.com/photos/3707744/pexels-photo-3707744.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "test1121",
+      "id": 4
+    },
+    {
+      "name": "phone1412",
+      "price": "180000",
+      "color": "white",
+      "category": "Mobile",
+      "image": "https://images.pexels.com/photos/3707744/pexels-photo-3707744.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "test1121",
+      "id": 5
+    }
+  ],
   "posts": [
     {
       "id": 1,

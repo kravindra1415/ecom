@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
+  sellerName: string = '';
   constructor(private route: Router) { }
 
   ngOnInit(): void {
@@ -17,6 +18,11 @@ export class HeaderComponent implements OnInit {
         if (localStorage.getItem('seller') && value.url.includes('seller')) {
           console.warn("in seller area");
           this.menuType = 'seller';
+          if (localStorage.getItem('seller')) {
+            let sellerStore = localStorage.getItem('seller');
+            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+            this.sellerName = sellerData.name;
+          }
         }
         else {
           console.warn("outside seller");
@@ -24,5 +30,10 @@ export class HeaderComponent implements OnInit {
         }
       }
     })
+  }
+
+  logout() {
+    localStorage.removeItem('seller');
+    this.route.navigate(['/']);
   }
 }
