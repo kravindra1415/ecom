@@ -10,11 +10,11 @@
   "products": [
     {
       "name": "phone1412",
-      "price": "180000",
-      "color": "white",
+      "price": "180234",
+      "color": "Black",
       "category": "Mobile",
       "image": "https://images.pexels.com/photos/3707744/pexels-photo-3707744.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "test1121",
+      "description": "test1121121",
       "id": 1
     },
     {
@@ -41,17 +41,8 @@
       "color": "white",
       "category": "Mobile",
       "image": "https://images.pexels.com/photos/3707744/pexels-photo-3707744.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "test1121",
+      "description": "test11",
       "id": 4
-    },
-    {
-      "name": "phone1412",
-      "price": "180000",
-      "color": "white",
-      "category": "Mobile",
-      "image": "https://images.pexels.com/photos/3707744/pexels-photo-3707744.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "test1121",
-      "id": 5
     }
   ],
   "posts": [

@@ -22,4 +22,12 @@ export class ProductService {
   deleteProduct(id: number) {
     return this.httpClient.delete(this.baseApiUrl + `products/${id}`);
   }
+
+  getProduct(id: string) {
+    return this.httpClient.get<product>(this.baseApiUrl + `products/${id}`)
+  }
+
+  updateProduct(product: product) {
+    return this.httpClient.put<product>(this.baseApiUrl + `products/${product.id}`, product);
+  }
 }

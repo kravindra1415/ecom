@@ -23,7 +23,10 @@
                 <td>{{item.description}}</td>
 
                 <td>
-                    <i style="font-size: 20px;" (click)="deleteProduct(item.id)" class="bi bi-trash"></i>
+                    <i style="font-size: 22px;cursor: pointer;" (click)="deleteProduct(item.id)"
+                        class="bi bi-trash"></i>&nbsp;
+                    <a routerLink="/seller-update-product/{{item.id}}"><i style="font-size: 20px;"
+                            class="bi bi-pencil"></i></a>
                     <!-- <button (click)="deleteProduct(item.id)">Delete</button> -->
                 </td>
             </tr>
