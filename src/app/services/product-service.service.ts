@@ -6,6 +6,7 @@ import { product } from '../models/signup';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductService {
   baseApiUrl = environment.baseApiURL;
   constructor(private httpClient: HttpClient) {
@@ -29,5 +30,13 @@ export class ProductService {
 
   updateProduct(product: product) {
     return this.httpClient.put<product>(this.baseApiUrl + `products/${product.id}`, product);
+  }
+
+  popularProducts() {
+    return this.httpClient.get<product[]>(this.baseApiUrl + "products?_limit=3")
+  }
+
+  trendyProducts() {
+    return this.httpClient.get<product[]>(this.baseApiUrl + "products?_limit=8")
   }
 }
