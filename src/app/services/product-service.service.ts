@@ -33,10 +33,14 @@ export class ProductService {
   }
 
   popularProducts() {
-    return this.httpClient.get<product[]>(this.baseApiUrl + "products?_limit=3")
+    return this.httpClient.get<product[]>(this.baseApiUrl + `products?_limit=3`);
   }
 
   trendyProducts() {
-    return this.httpClient.get<product[]>(this.baseApiUrl + "products?_limit=8")
+    return this.httpClient.get<product[]>(this.baseApiUrl + `products?_limit=8`);
+  }
+
+  searchProduct(query: string) {
+    return this.httpClient.get<product[]>(this.baseApiUrl + `products?q=${query}`);
   }
 }
