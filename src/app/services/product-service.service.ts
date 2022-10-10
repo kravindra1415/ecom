@@ -43,4 +43,6 @@ export class ProductService {
   searchProduct(query: string) {
     return this.httpClient.get<product[]>(this.baseApiUrl + `products?q=${query}`);
   }
+
+
 }

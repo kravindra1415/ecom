@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit {
       const element = queryData.target as HTMLTextAreaElement;
       //console.warn(element.value);
       this.prodcutService.searchProduct(element.value).subscribe((data) => {
-        console.warn(data);
+        //console.warn(data);
         if (data.length > 5) {
           data.length = 5;
         }
@@ -56,5 +56,9 @@ export class HeaderComponent implements OnInit {
   }
   hideSearch() {
     this.searchResult = undefined;
+  }
+  submitSearch(data: string) {
+    console.warn(data);
+    this.route.navigate([`search/${data}`]);
   }
 }
