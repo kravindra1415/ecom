@@ -13,6 +13,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
 import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchComponent } from './search/search.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchComponent } from './search/search.component';
     SellerHomeComponent,
     SellerAddProductComponent,
     SellerUpdateProductComponent,
-    SearchComponent
+    SearchComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
