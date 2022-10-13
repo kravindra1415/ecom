@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
           }
         }
         else {
-          console.warn("outside seller");
+          //console.warn("outside seller");
           this.menuType = 'default';
         }
       }
@@ -58,7 +58,12 @@ export class HeaderComponent implements OnInit {
     this.searchResult = undefined;
   }
   submitSearch(data: string) {
-    console.warn(data);
+    //console.warn(data);
     this.route.navigate([`search/${data}`]);
+  }
+
+  redirectToDown(id: number) {
+    this.route.navigate(['/details/' + id]);
+
   }
 }

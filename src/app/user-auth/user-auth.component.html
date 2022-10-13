@@ -1,0 +1,9 @@
+<div class="user-auth">
+  <h1>User Sign Up</h1>
+  <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
+    <input type="text" class="form-input" name="name" ngModel id="" placeholder="enter user name">
+    <input type="text" class="form-input" name="email" ngModel id="" placeholder="enter user email">
+    <input type="text" class="form-input" name="password" ngModel id="" placeholder="enter user password">
+    <button class="">Sign up</button>
+  </form>
+</div>

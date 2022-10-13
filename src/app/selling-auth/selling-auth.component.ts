@@ -44,6 +44,10 @@ export class SellingAuthComponent implements OnInit {
     this.showLogin = false;
   }
 
+  passwordVisibility() {
+    alert()
+  }
+
   // signUp(data: SignUp): void {
   //   this.sellerService.userSignUp(data).subscribe((response) => {
   //     if (response) {

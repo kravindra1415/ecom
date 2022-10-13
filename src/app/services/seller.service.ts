@@ -18,11 +18,11 @@ export class SellerService {
   constructor(private httpClient: HttpClient, private route: Router) { }
 
   userSignUp(data: SignUp) {
-    this.httpClient.post(this.baseApiUrl, data, { observe: 'response' }).
+    this.httpClient.post(this.baseApiUrl + "seller", data, { observe: 'response' }).
       subscribe((result) => {
         this.isSellerLoggedIn.next(true);
         localStorage.setItem('seller', JSON.stringify(result.body))
-        //this.route.navigate(['seller-home']);
+        this.route.navigate(['seller-home']);
 
         ///console.warn('result', result)
       });
@@ -38,7 +38,7 @@ export class SellerService {
   userLogin(data: login) {
     console.warn(data)
 
-    this.httpClient.get(this.baseApiUrl + `?email=${data.email}&password=${data.password}`, { observe: 'response' }).
+    this.httpClient.get(this.baseApiUrl + "seller" + `?email=${data.email}&password=${data.password}`, { observe: 'response' }).
       subscribe((result: any) => {
         console.warn(result)
         if (result && result.body && result.body.length) {
