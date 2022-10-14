@@ -1,4 +1,18 @@
 {
+  "users": [
+    {
+      "name": "India",
+      "email": "raj@gmail.com",
+      "password": "admin",
+      "id": 1
+    },
+    {
+      "name": "Nagar",
+      "email": "raj@gmail.com",
+      "password": "dasd",
+      "id": 2
+    }
+  ],
   "seller": [
     {
       "name": "raj verma",
