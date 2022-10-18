@@ -18,9 +18,11 @@ export class UsersService {
       subscribe((response) => {
         console.warn(response);
         if (response) {
-          localStorage.setItem('users', JSON.stringify(response.body));
+          localStorage.setItem('user', JSON.stringify(response.body));
           this.route.navigate(['/'])
         }
       });
   }
+
+  
 }

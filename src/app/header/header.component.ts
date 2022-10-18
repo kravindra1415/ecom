@@ -11,6 +11,7 @@ import { ProductService } from '../services/product-service.service';
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
+  userName: string = '';
   searchResult: undefined | product[];
 
   constructor(private route: Router, private prodcutService: ProductService) { }
@@ -20,13 +21,16 @@ export class HeaderComponent implements OnInit {
       //console.warn(value.url)
       if (value.url) {
         if (localStorage.getItem('seller') && value.url.includes('seller')) {
-          console.warn("in seller area");
+          //console.warn("in seller area");
+          let sellerStore = localStorage.getItem('seller');
+          let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+          this.sellerName = sellerData.name;
           this.menuType = 'seller';
-          if (localStorage.getItem('seller')) {
-            let sellerStore = localStorage.getItem('seller');
-            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-            this.sellerName = sellerData.name;
-          }
+        } else if (localStorage.getItem('user')) {
+          let userStore = localStorage.getItem('user');
+          let userData = userStore && JSON.parse(userStore);
+          this.userName = userData.name;
+          this.menuType = 'user';
         }
         else {
           //console.warn("outside seller");
@@ -39,6 +43,10 @@ export class HeaderComponent implements OnInit {
   logout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
+  }
+  userLogout() {
+    localStorage.removeItem('user');
+    this.route.navigate(['/user-auth']);
   }
 
   searchProduct(queryData: KeyboardEvent) {

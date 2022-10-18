@@ -11,6 +11,18 @@
       "email": "raj@gmail.com",
       "password": "dasd",
       "id": 2
+    },
+    {
+      "name": "India",
+      "email": "abc@gmail.com",
+      "password": "admin",
+      "id": 3
+    },
+    {
+      "name": "Nagar",
+      "email": "w@gmail.com",
+      "password": "12121212",
+      "id": 4
     }
   ],
   "seller": [

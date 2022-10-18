@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SignUp } from '../models/signup';
+import { login, SignUp } from '../models/signup';
 import { UsersService } from '../services/users.service';
 
 @Component({
@@ -9,13 +9,26 @@ import { UsersService } from '../services/users.service';
 })
 export class UserAuthComponent implements OnInit {
 
-  constructor(private userAuthService: UsersService) { }
+  showLogin: boolean = true;
+  constructor(private userService: UsersService) { }
 
   ngOnInit() {
   }
 
   signUp(data: SignUp) {
-    this.userAuthService.userSign(data);
+    this.userService.userSign(data);
+  }
+
+  login(data: login) {
+
+  }
+
+  openSignUp() {
+    this.showLogin = false;
+  }
+  openLogin() {
+    this.showLogin = true;
+
   }
 
 }
