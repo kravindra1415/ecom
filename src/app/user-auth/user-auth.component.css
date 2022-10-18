@@ -13,3 +13,13 @@
     cursor: pointer;
     color: blueviolet;
 }
+
+.invalid-input {
+    color: red;
+    font-size: 12px;
+    margin-top: -13px;
+}
+
+button:disabled {
+    cursor: not-allowed !important;
+}

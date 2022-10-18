@@ -10,6 +10,7 @@ import { UsersService } from '../services/users.service';
 export class UserAuthComponent implements OnInit {
 
   showLogin: boolean = true;
+  authError: string = "";
   constructor(private userService: UsersService) { }
 
   ngOnInit() {
@@ -20,7 +21,13 @@ export class UserAuthComponent implements OnInit {
   }
 
   login(data: login) {
-
+    this.userService.userLogin(data);
+    this.userService.isValidUserAuth.subscribe((response) => {
+      console.warn("apple", response);
+      if (response) {
+        this.authError = "please enter a valid user details.."
+      }
+    })
   }
 
   openSignUp() {

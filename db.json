@@ -23,6 +23,30 @@
       "email": "w@gmail.com",
       "password": "12121212",
       "id": 4
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "test",
+      "id": 5
+    },
+    {
+      "name": "RRR",
+      "email": "raj@gmail.com",
+      "password": "admin",
+      "id": 6
+    },
+    {
+      "name": "test11",
+      "email": "test11@gmail.com",
+      "password": "test11",
+      "id": 7
+    },
+    {
+      "name": "one",
+      "email": "one@gmail.com",
+      "password": "one",
+      "id": 8
     }
   ],
   "seller": [
