@@ -7,8 +7,8 @@ import { login, SignUp } from '../models/signup';
 @Injectable({
   providedIn: 'root'
 })
-export class UsersService {
 
+export class UsersService {
   isValidUserAuth = new EventEmitter<boolean>(false);
   baseApiUrl = environment.baseApiURL;
   constructor(private _httpClient: HttpClient, private router: Router) { }
@@ -52,5 +52,4 @@ export class UsersService {
       this.router.navigate(['/']);
     }
   }
-
 }
