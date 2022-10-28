@@ -8,6 +8,7 @@ import { ProductService } from '../services/product-service.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
+
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';

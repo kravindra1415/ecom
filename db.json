@@ -23,6 +23,66 @@
       "userId": 5,
       "productId": 7,
       "id": 2
+    },
+    {
+      "name": "Bat",
+      "price": "28000",
+      "color": "white",
+      "category": "Sports",
+      "image": "https://images.pexels.com/photos/9420724/pexels-photo-9420724.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Cricket",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 7,
+      "id": 3
+    },
+    {
+      "name": "Football",
+      "price": "1800",
+      "color": "red",
+      "category": "Sports",
+      "image": "https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "test1121",
+      "quantity": 1,
+      "productId": 8,
+      "userId": null,
+      "id": 4
+    },
+    {
+      "name": "IPhone 14",
+      "price": "180000",
+      "color": "white",
+      "category": "Mobile",
+      "image": "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "IPhone 14",
+      "quantity": 1,
+      "productId": 2,
+      "userId": null,
+      "id": 5
+    },
+    {
+      "name": "Books",
+      "price": "700",
+      "color": "red",
+      "category": "Books",
+      "image": "https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Tech Books",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 4,
+      "id": 6
+    },
+    {
+      "name": "Toys",
+      "price": "3000",
+      "color": "black",
+      "category": "Toys",
+      "image": "https://images.pexels.com/photos/269323/pexels-photo-269323.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "test1121",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 5,
+      "id": 7
     }
   ],
   "users": [
