@@ -8,10 +8,12 @@ import { ProductService } from '../services/product-service.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
+
 export class DetailsComponent implements OnInit {
 
   productQuantity: number = 1;
-  productData: product | undefined;
+  productData: undefined | product;
+  removeCart = false;
   constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -21,6 +23,18 @@ export class DetailsComponent implements OnInit {
     productId && this.productService.getProduct(productId).subscribe((response) => {
       console.warn(response);
       this.productData = response;
+
+      let cartData = localStorage.getItem('localCart');
+      if (productId && cartData) {
+        let items = JSON.parse(cartData);
+        items = items.filter((item: product) => productId == item.id.toString())
+        if (items.length) {
+          this.removeCart = true;
+        }
+        else {
+          this.removeCart = false;
+        }
+      }
     })
   }
 
@@ -30,20 +44,37 @@ export class DetailsComponent implements OnInit {
     }
     else if (this.productQuantity > 1 && val === 'min') {
       this.productQuantity -= 1;
-
     }
   }
+
+  // AddToCart() {
+  //   if (this.productData) {
+  //     this.productData.quantity = this.productQuantity;
+  //     if (! localStorage.getItem('user')) {
+  //       console.warn(this.productData);
+  //       this.productService.localAddToCart(this.productData);
+  //     }
+  //     else{
+
+  //     }
+  //   }
+  // }
 
   AddToCart() {
     if (this.productData) {
       this.productData.quantity = this.productQuantity;
-      if (! localStorage.getItem('user')) {
-        console.warn(this.productData);
+      if (localStorage.getItem('user')) {
+        console.log(this.productData);
         this.productService.localAddToCart(this.productData);
-      }
-      else{
-        
+        this.removeCart = true;
+      } else {
+        console.warn('else');
       }
     }
+  }
+
+  RemoveToCart(productId: number) {
+    this.productService.removeItemFromCart(productId);
+    this.removeCart = false;
   }
 }

@@ -47,6 +47,12 @@
       "email": "one@gmail.com",
       "password": "one",
       "id": 8
+    },
+    {
+      "name": "new user",
+      "email": "user@gmail.com",
+      "password": "user@123",
+      "id": 9
     }
   ],
   "seller": [

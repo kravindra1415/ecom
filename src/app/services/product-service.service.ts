@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { product } from '../models/signup';
 
@@ -8,9 +8,11 @@ import { product } from '../models/signup';
 })
 
 export class ProductService {
+  cartData = new EventEmitter<product[] | []>();
   baseApiUrl = environment.baseApiURL;
   constructor(private httpClient: HttpClient) {
   }
+
   addProduct(data: product) {
     console.warn("service called");
     return this.httpClient.post(this.baseApiUrl + "products", data)
@@ -53,8 +55,19 @@ export class ProductService {
     else {
       cartData = JSON.parse(localCart);
       cartData.push(data);
-      localStorage.setItem('localCart', JSON.stringify([data]));
-
+      localStorage.setItem('localCart', JSON.stringify(cartData));
     }
+    this.cartData.emit(cartData);
   }
+
+  removeItemFromCart(productId: number) {
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      let items: product[] = JSON.parse(cartData);
+      items = items.filter( (item: product) => productId !== item.id);
+      console.warn(items);
+      localStorage.setItem('localCart', JSON.stringify(items));
+      this.cartData.emit(items);
+    }
+  } 
 }

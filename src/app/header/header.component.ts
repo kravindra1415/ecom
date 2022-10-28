@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   sellerName: string = '';
   userName: string = '';
   searchResult: undefined | product[];
+  cartItems = 0;
 
   constructor(private route: Router, private prodcutService: ProductService) { }
 
@@ -37,6 +38,13 @@ export class HeaderComponent implements OnInit {
           this.menuType = 'default';
         }
       }
+    });
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      this.cartItems = JSON.parse(cartData).length;
+    }
+    this.prodcutService.cartData.subscribe((items) => {
+      this.cartItems = items.length
     })
   }
 
@@ -62,9 +70,11 @@ export class HeaderComponent implements OnInit {
       })
     }
   }
+
   hideSearch() {
     this.searchResult = undefined;
   }
+
   submitSearch(data: string) {
     //console.warn(data);
     this.route.navigate([`search/${data}`]);
@@ -72,6 +82,5 @@ export class HeaderComponent implements OnInit {
 
   redirectToDown(id: number) {
     this.route.navigate(['/details/' + id]);
-
   }
 }
