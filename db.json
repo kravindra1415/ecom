@@ -1,4 +1,30 @@
 {
+  "cart": [
+    {
+      "name": "Hp Laptop",
+      "price": "40000",
+      "color": "black",
+      "category": "PC",
+      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "A Hp Laptop",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 1,
+      "id": 1
+    },
+    {
+      "name": "Bat",
+      "price": "28000",
+      "color": "white",
+      "category": "Sports",
+      "image": "https://images.pexels.com/photos/9420724/pexels-photo-9420724.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Cricket",
+      "quantity": 5,
+      "userId": 5,
+      "productId": 7,
+      "id": 2
+    }
+  ],
   "users": [
     {
       "name": "India",
