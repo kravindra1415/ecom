@@ -83,6 +83,78 @@
       "userId": 5,
       "productId": 5,
       "id": 7
+    },
+    {
+      "name": "Bat",
+      "price": "28000",
+      "color": "white",
+      "category": "Sports",
+      "image": "https://images.pexels.com/photos/9420724/pexels-photo-9420724.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Cricket",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 7,
+      "id": 8
+    },
+    {
+      "name": "Toys",
+      "price": "3000",
+      "color": "black",
+      "category": "Toys",
+      "image": "https://images.pexels.com/photos/269323/pexels-photo-269323.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "test1121",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 5,
+      "id": 9
+    },
+    {
+      "name": "Hp Laptop",
+      "price": "40000",
+      "color": "black",
+      "category": "PC",
+      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "A Hp Laptop",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 1,
+      "id": 10
+    },
+    {
+      "name": "Hp Laptop",
+      "price": "40000",
+      "color": "black",
+      "category": "PC",
+      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "A Hp Laptop",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 1,
+      "id": 11
+    },
+    {
+      "name": "Hp Laptop",
+      "price": "40000",
+      "color": "black",
+      "category": "PC",
+      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "A Hp Laptop",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 1,
+      "id": 12
+    },
+    {
+      "name": "Books",
+      "price": "700",
+      "color": "red",
+      "category": "Books",
+      "image": "https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "Tech Books",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 4,
+      "id": 13
     }
   ],
   "users": [

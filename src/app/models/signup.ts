@@ -16,7 +16,7 @@ export interface product {
     category: string,
     color: string,
     description: string,
-    image: string, quantity: number;
+    image: string, quantity: number; productId: number
 }
 
 export interface cart {
