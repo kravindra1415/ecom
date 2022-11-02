@@ -1,18 +1,6 @@
 {
   "cart": [
     {
-      "name": "Hp Laptop",
-      "price": "40000",
-      "color": "black",
-      "category": "PC",
-      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "A Hp Laptop",
-      "quantity": 1,
-      "userId": 5,
-      "productId": 1,
-      "id": 1
-    },
-    {
       "name": "Bat",
       "price": "28000",
       "color": "white",
@@ -109,42 +97,6 @@
       "id": 9
     },
     {
-      "name": "Hp Laptop",
-      "price": "40000",
-      "color": "black",
-      "category": "PC",
-      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "A Hp Laptop",
-      "quantity": 1,
-      "userId": 5,
-      "productId": 1,
-      "id": 10
-    },
-    {
-      "name": "Hp Laptop",
-      "price": "40000",
-      "color": "black",
-      "category": "PC",
-      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "A Hp Laptop",
-      "quantity": 1,
-      "userId": 5,
-      "productId": 1,
-      "id": 11
-    },
-    {
-      "name": "Hp Laptop",
-      "price": "40000",
-      "color": "black",
-      "category": "PC",
-      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "A Hp Laptop",
-      "quantity": 1,
-      "userId": 5,
-      "productId": 1,
-      "id": 12
-    },
-    {
       "name": "Books",
       "price": "700",
       "color": "red",
@@ -155,6 +107,30 @@
       "userId": 5,
       "productId": 4,
       "id": 13
+    },
+    {
+      "name": "Hp Laptop",
+      "price": "40000",
+      "color": "black",
+      "category": "PC",
+      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "A Hp Laptop",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 1,
+      "id": 14
+    },
+    {
+      "name": "IPhone 14",
+      "price": "180000",
+      "color": "white",
+      "category": "Mobile",
+      "image": "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "IPhone 14",
+      "quantity": 1,
+      "userId": 5,
+      "productId": 2,
+      "id": 15
     }
   ],
   "users": [

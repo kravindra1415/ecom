@@ -33,6 +33,7 @@ export class HeaderComponent implements OnInit {
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'user';
+          this.prodcutService.getCartList(userData.id);
         }
         else {
           //console.warn("outside seller");

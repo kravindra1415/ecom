@@ -80,12 +80,16 @@ export class ProductService {
   getCartList(userId: number) {
     return this.httpClient.get<product[]>(this.baseApiUrl + "cart?" + "userId=" + userId,
       { observe: 'response' }).subscribe((result) => {
-        console.warn(result);
+        //console.warn(result);
         if (result && result.body) {
           this.cartData.emit(result.body);
         }
       });
   }
 
-
+  removeToCart(cartId: number) {
+    //return this.httpClient.delete(this.baseApiUrl + "cart/" + cartId);
+    return this.httpClient.delete(this.baseApiUrl + `cart/${cartId}`);
+    //`products/${id}`  
+  }
 }

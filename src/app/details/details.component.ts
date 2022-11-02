@@ -12,8 +12,11 @@ import { ProductService } from '../services/product-service.service';
 export class DetailsComponent implements OnInit {
 
   productQuantity: number = 1;
-  productData: undefined | product;
+  productData: product | undefined;
   removeCart = false;
+  cartData: product | undefined;
+
+
   constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -43,8 +46,9 @@ export class DetailsComponent implements OnInit {
         //if there is 5 instead of 0 then it remain there.  
         this.productService.getCartList(userId);
         this.productService.cartData.subscribe((response) => {
-          let item = response.filter((item: product) => productId?.toString() === item.productId.toString());
+          let item = response.filter((item: product) => productId === item.productId?.toString());
           if (item.length) {
+            this.cartData = item[0];
             this.removeCart = true;
           }
         })
@@ -109,8 +113,19 @@ export class DetailsComponent implements OnInit {
   }
 
   RemoveToCart(productId: number) {
-    this.productService.removeItemFromCart(productId);
-    this.removeCart = false;
+    //debugger;
+    if (!localStorage.getItem('user')) {
+      this.productService.removeItemFromCart(productId);
+    } else {
+      let user = localStorage.getItem('user');
+      let userId = user && JSON.parse(user).id;
+      console.warn(this.cartData);
+      this.cartData && this.productService.removeToCart(this.cartData.id).subscribe((result) => {
+        if (result) {
+          this.productService.getCartList(userId);
+        }
+      })
+      this.removeCart = false;
+    }
   }
-
 }
