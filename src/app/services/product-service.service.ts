@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { cart, product } from '../models/signup';
+import { cart, order, product } from '../models/signup';
 
 @Injectable({
   providedIn: 'root'
@@ -98,5 +98,9 @@ export class ProductService {
     let userData = userStore && JSON.parse(userStore);
 
     return this.httpClient.get<cart[]>(this.baseApiUrl + 'cart?userId=' + userData.id);
+  }
+
+  orderNow(data: order) {
+    return this.httpClient.post(this.baseApiUrl + 'orders', data)
   }
 }
