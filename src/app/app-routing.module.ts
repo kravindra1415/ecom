@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { CartPageComponent } from './cart-page/cart-page.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
@@ -38,6 +39,9 @@ const routes: Routes = [
   },
   {
     path: 'cart-page', component: CartPageComponent
+  },
+  {
+    path: 'checkout', component: CheckoutComponent
   }
 ];
 
