@@ -92,4 +92,11 @@ export class ProductService {
     return this.httpClient.delete(this.baseApiUrl + `cart/${cartId}`);
     //`products/${id}`  
   }
+
+  currentCart() {
+    let userStore = localStorage.getItem('user');
+    let userData = userStore && JSON.parse(userStore);
+
+    return this.httpClient.get<cart[]>(this.baseApiUrl + 'cart?userId=' + userData.id);
+  }
 }

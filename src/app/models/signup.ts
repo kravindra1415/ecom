@@ -27,7 +27,15 @@ export interface cart {
     color: string,
     description: string,
     image: string,
-    quantity: undefined | number;
+    quantity: number;
     userId: number;
     productId: number;
+}
+
+export interface priceSummary {
+    price: number;
+    discount: number;
+    tax: number;
+    delivery: number;
+    total: number;
 }

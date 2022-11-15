@@ -28,17 +28,21 @@ export class HeaderComponent implements OnInit {
           let sellerData = sellerStore && JSON.parse(sellerStore)[0];
           this.sellerName = sellerData.name;
           this.menuType = 'seller';
-        } else if (localStorage.getItem('user')) {
+        }
+
+        else if (localStorage.getItem('user')) {
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'user';
           this.prodcutService.getCartList(userData.id);
         }
+
         else {
           //console.warn("outside seller");
           this.menuType = 'default';
         }
+
       }
     });
     let cartData = localStorage.getItem('localCart');

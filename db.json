@@ -1,30 +1,6 @@
 {
   "cart": [
     {
-      "name": "Bat",
-      "price": "28000",
-      "color": "white",
-      "category": "Sports",
-      "image": "https://images.pexels.com/photos/9420724/pexels-photo-9420724.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "Cricket",
-      "quantity": 5,
-      "userId": 5,
-      "productId": 7,
-      "id": 2
-    },
-    {
-      "name": "Bat",
-      "price": "28000",
-      "color": "white",
-      "category": "Sports",
-      "image": "https://images.pexels.com/photos/9420724/pexels-photo-9420724.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "Cricket",
-      "quantity": 1,
-      "userId": 5,
-      "productId": 7,
-      "id": 3
-    },
-    {
       "name": "Football",
       "price": "1800",
       "color": "red",
@@ -49,30 +25,6 @@
       "id": 5
     },
     {
-      "name": "Books",
-      "price": "700",
-      "color": "red",
-      "category": "Books",
-      "image": "https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "Tech Books",
-      "quantity": 1,
-      "userId": 5,
-      "productId": 4,
-      "id": 6
-    },
-    {
-      "name": "Toys",
-      "price": "3000",
-      "color": "black",
-      "category": "Toys",
-      "image": "https://images.pexels.com/photos/269323/pexels-photo-269323.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "test1121",
-      "quantity": 1,
-      "userId": 5,
-      "productId": 5,
-      "id": 7
-    },
-    {
       "name": "Bat",
       "price": "28000",
       "color": "white",
@@ -85,18 +37,6 @@
       "id": 8
     },
     {
-      "name": "Toys",
-      "price": "3000",
-      "color": "black",
-      "category": "Toys",
-      "image": "https://images.pexels.com/photos/269323/pexels-photo-269323.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "test1121",
-      "quantity": 1,
-      "userId": 5,
-      "productId": 5,
-      "id": 9
-    },
-    {
       "name": "Books",
       "price": "700",
       "color": "red",
@@ -107,18 +47,6 @@
       "userId": 5,
       "productId": 4,
       "id": 13
-    },
-    {
-      "name": "Hp Laptop",
-      "price": "40000",
-      "color": "black",
-      "category": "PC",
-      "image": "https://images.pexels.com/photos/11129922/pexels-photo-11129922.jpeg?auto=compress&cs=tinysrgb&w=600",
-      "description": "A Hp Laptop",
-      "quantity": 1,
-      "userId": 5,
-      "productId": 1,
-      "id": 14
     },
     {
       "name": "Shirt",
@@ -143,6 +71,18 @@
       "userId": 1,
       "productId": 1,
       "id": 16
+    },
+    {
+      "name": "Football",
+      "price": "1800",
+      "color": "red",
+      "category": "Sports",
+      "image": "https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "test1121",
+      "quantity": 4,
+      "userId": 5,
+      "productId": 8,
+      "id": 17
     }
   ],
   "users": [
