@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
+import { CartPageComponent } from './cart-page/cart-page.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
@@ -34,6 +35,9 @@ const routes: Routes = [
   },
   {
     path: 'user-auth', component: UserAuthComponent
+  },
+  {
+    path: 'cart-page', component: CartPageComponent
   }
 ];
 
