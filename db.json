@@ -15,6 +15,30 @@
       "totalPrice": 35900,
       "userId": 5,
       "id": 2
+    },
+    {
+      "email": "raj@gmail.com",
+      "address": "Mumbai",
+      "contact": "1212121212",
+      "totalPrice": 35900,
+      "userId": 5,
+      "id": 3
+    },
+    {
+      "email": "raj@gmail.com",
+      "address": "Nagar",
+      "contact": "1212121212",
+      "totalPrice": 35900,
+      "userId": 5,
+      "id": 4
+    },
+    {
+      "email": "w@gmail.com",
+      "address": "Pune",
+      "contact": "1212121212",
+      "totalPrice": 41900,
+      "userId": 5,
+      "id": 5
     }
   ],
   "cart": [
@@ -101,6 +125,18 @@
       "userId": 5,
       "productId": 8,
       "id": 17
+    },
+    {
+      "name": "Jeans",
+      "price": "2000",
+      "color": "blue",
+      "category": "clothes",
+      "image": "https://images.pexels.com/photos/52518/jeans-pants-blue-shop-52518.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "description": "clothes",
+      "quantity": 3,
+      "userId": 5,
+      "productId": 6,
+      "id": 18
     }
   ],
   "users": [

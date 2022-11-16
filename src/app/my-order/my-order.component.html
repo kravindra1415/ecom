@@ -1,16 +1,16 @@
 <div class="my-order">
-  <div class="row order-data">
+  <div class="row order-data" *ngFor="let data of orderData">
     <div class="col-sm-2">
       <img class="order-img" src="../../assets/order.png" alt="">
     </div>
     <div class="col-sm-2">
-      <span>#100</span>
+      <span>{{data.id}}</span>
     </div>
     <div class="col-sm-2">
-      <span>12000</span>
+      <span>{{data.totalPrice}}</span>
     </div>
     <div class="col-sm-2">
-      <span>In Process</span>
+      <span>In Progress</span>
     </div>
     <div class="col-sm-2">
       <span><button class="form-button">Cancel Order</button></span>

@@ -103,4 +103,20 @@ export class ProductService {
   orderNow(data: order) {
     return this.httpClient.post(this.baseApiUrl + 'orders', data)
   }
+
+  orderList() {
+    let userStore = localStorage.getItem('user');
+    let userData = userStore && JSON.parse(userStore);
+
+    return this.httpClient.get<order[]>(this.baseApiUrl + 'orders?userId=' + userData.id);
+  }
+
+  deleteCartItems(cartId: number) {
+    return this.httpClient.delete(this.baseApiUrl + `cart/${cartId}`, { observe: 'response' })
+      .subscribe((result) => {
+        if (result) {
+          this.cartData.emit([]);
+        }
+      });
+  }
 }
