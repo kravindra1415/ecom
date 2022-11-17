@@ -119,4 +119,11 @@ export class ProductService {
         }
       });
   }
+
+  cancelOrder(orderId: number) {
+    return this.httpClient.delete(this.baseApiUrl + 'orders/' + orderId)
+  }
+
+
+
 }
