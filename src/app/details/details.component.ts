@@ -117,11 +117,11 @@ export class DetailsComponent implements OnInit {
     if (!localStorage.getItem('user')) {
       this.productService.removeItemFromCart(productId);
     } else {
-      let user = localStorage.getItem('user');
-      let userId = user && JSON.parse(user).id;
       console.warn(this.cartData);
       this.cartData && this.productService.removeToCart(this.cartData.id).subscribe((result) => {
         if (result) {
+          let user = localStorage.getItem('user');
+          let userId = user && JSON.parse(user).id;
           this.productService.getCartList(userId);
         }
       })

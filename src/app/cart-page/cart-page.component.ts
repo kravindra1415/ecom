@@ -21,6 +21,26 @@ export class CartPageComponent implements OnInit {
   constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit() {
+    this.loadDetails();
+  }
+
+  checkout() {
+    this.router.navigate(['/checkout']);
+  }
+
+  removeToCart(cartId: number | undefined) {
+    cartId && this.productService.removeToCart(cartId).subscribe((result) => {
+      // if (result) {
+      //   let user = localStorage.getItem('user');
+      //   let userId = user && JSON.parse(user).id;
+      //   this.productService.getCartList(userId);
+      // }
+      alert()
+      this.loadDetails();
+    })
+  }
+
+  loadDetails() {
     this.productService.currentCart().subscribe((result) => {
       console.warn(result);
       this.cartData = result;
@@ -36,11 +56,15 @@ export class CartPageComponent implements OnInit {
       this.priceSummary.delivery = 100;
       this.priceSummary.total = price + (price / 10) + 100 - (price / 100);
 
+      if (!this.cartData.length) {
+        this.router.navigate(['/']);
+      }
+
       console.warn(this.priceSummary);
     })
   }
 
-  checkout() {
-    this.router.navigate(['/checkout']);
+  reload() {
+    location.reload();
   }
 }
